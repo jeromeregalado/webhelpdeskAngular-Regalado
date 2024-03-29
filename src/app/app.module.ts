@@ -29,9 +29,9 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
   ],
   imports: [
-    NgbModule,
     BrowserModule,
     AppRoutingModule,
+    NgbModule,
     HttpClientModule,FormsModule,HomeComponent, BrowserAnimationsModule ,
     MatFormFieldModule, MatInputModule,MatFormFieldModule, MatInputModule, MatDatepickerModule,
      MatNativeDateModule,
@@ -43,6 +43,6 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   providers: [],
   // AppComponent
-  bootstrap: []
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
