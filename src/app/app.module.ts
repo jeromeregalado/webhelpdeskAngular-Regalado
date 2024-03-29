@@ -20,12 +20,14 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
 import { ShowDetailsComponent } from './show-details/show-details.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
   declarations: [
-    CreateEmployeeComponent
+    CreateEmployeeComponent,
+    EmployeeListComponent,
+    UpdateEmployeeComponent,
+    ShowDetailsComponent
 
   ],
   imports: [
@@ -34,15 +36,9 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule,
     HttpClientModule,FormsModule,HomeComponent, BrowserAnimationsModule ,
     MatFormFieldModule, MatInputModule,MatFormFieldModule, MatInputModule, MatDatepickerModule,
-     MatNativeDateModule,
-     AppComponent,
-    EmployeeListComponent,
-    UpdateEmployeeComponent,
-    ShowDetailsComponent,
-    NgbCarouselModule
+     MatNativeDateModule
   ],
   providers: [],
-  // AppComponent
   bootstrap: [AppComponent]
 })
 export class AppModule { }
