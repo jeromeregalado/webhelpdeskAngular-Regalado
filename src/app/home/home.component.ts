@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   standalone: true,
-	imports: [NgbCarouselModule]
+	imports: []
 })
 export class HomeComponent {
 
