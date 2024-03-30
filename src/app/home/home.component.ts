@@ -10,11 +10,10 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
 
-  constructor(
-
-    private router: Router) {
+  constructor(private router: Router) {
 
     }
+
   goToEmployeeList(){
     this.router.navigate(['/show-all-employees']);
   }
