@@ -17,11 +17,11 @@ export class EmployeeService {
   constructor(private httpClient: HttpClient) { }
 
   getEmployeesList(): Observable<Employee[]>{
-    return this.httpClient.get<Employee[]>(`${this.baseURL}`);
+    return this.httpClient.get<Employee[]>(`${this.baseURL}/viewAll`);
   }
 
   addEmployee(employee: Employee): Observable<Object>{
-    return this.httpClient.post(`${this.baseURL}`, employee);
+    return this.httpClient.post(`${this.baseURL}/add`, employee);
   }
 
   getEmployeeById(id: number): Observable<Employee>{
