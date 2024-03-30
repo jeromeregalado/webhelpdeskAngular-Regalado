@@ -24,19 +24,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
+    AppComponent,
+    ShowDetailsComponent,
     CreateEmployeeComponent,
     EmployeeListComponent,
-    UpdateEmployeeComponent,
-    ShowDetailsComponent
+    UpdateEmployeeComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule,FormsModule,HomeComponent, BrowserAnimationsModule ,
-    MatFormFieldModule, MatInputModule,MatFormFieldModule, MatInputModule, MatDatepickerModule,
-     MatNativeDateModule
+    HttpClientModule,
+    FormsModule,
+    HomeComponent,
+    BrowserAnimationsModule ,
+    MatFormFieldModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

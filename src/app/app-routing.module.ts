@@ -12,8 +12,8 @@ const routes: Routes = [
   {path:"show-all-employees",component: EmployeeListComponent},
   {path:"add-employee", component: CreateEmployeeComponent},
   {path:'', redirectTo: "home", pathMatch:"full"},
-  {path:'updating-by-id/:id',component:UpdateEmployeeComponent},
-  {path:'details-of-employee/:id',component:ShowDetailsComponent},
+  {path:'updating-by-employeeNumber/:employeeNumber',component:UpdateEmployeeComponent},
+  {path:'details-of-employee/:employeeNumber',component:ShowDetailsComponent},
   {path:'home',component:HomeComponent}
 ];
 
