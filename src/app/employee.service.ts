@@ -12,7 +12,7 @@ export class EmployeeService {
 
 
 
-  private baseURL = "http://localhost:8080/api/v1/employees";
+  private baseURL = "http://localhost:8081/employees";
 
   constructor(private httpClient: HttpClient) { }
 

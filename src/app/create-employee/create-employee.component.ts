@@ -33,7 +33,7 @@ export class CreateEmployeeComponent //implements OnInit//
 
 
   submitform!: NgForm;
-  private baseURL = "http://localhost:8081/api/v1/employees";
+  private baseURL = "http://localhost:8081/employees";
   employee: Employee = new Employee();
 
 
