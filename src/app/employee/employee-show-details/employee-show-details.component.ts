@@ -8,10 +8,10 @@ import { RouterLink } from '@angular/router';
   selector: 'app-show-details',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './show-details.component.html',
-  styleUrl: './show-details.component.css'
+  templateUrl: './employee-show-details.component.html',
+  styleUrl: './employee-show-details.component.css'
 })
-export class ShowDetailsComponent {
+export class EmployeeShowDetailsComponent {
   employeeNumber: number
   employee!: Employee
   constructor(private route: ActivatedRoute, private employeeService: EmployeeService) {

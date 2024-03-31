@@ -17,22 +17,22 @@ import { FormsModule } from '@angular/forms';
 export class UpdateEmployeeComponent {
   employeeNumber: number;
   employee: Employee = new Employee();
-  
-  
+
+
   constructor(private employeeService: EmployeeService,
     private route: ActivatedRoute,
-    private router: Router) { 
+    private router: Router) {
       this.employeeNumber=0
     }
-    //loading the data into form 
+    //loading the data into form
   ngOnInit(): void {
     this.employeeNumber = this.route.snapshot.params['employeeNumber'];
 
     this.employeeService.getEmployeeByEmployeeNumber(this.employeeNumber).subscribe(data => {
       this.employee = data;
     }, error => console.log(error));
- 
- 
+
+
   }
 
   onSubmit(){

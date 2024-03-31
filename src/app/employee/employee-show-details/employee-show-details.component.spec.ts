@@ -1,18 +1,18 @@
+import { EmployeeShowDetailsComponent } from './employee-show-details.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShowDetailsComponent } from './show-details.component';
 
 describe('ShowDetailsComponent', () => {
-  let component: ShowDetailsComponent;
-  let fixture: ComponentFixture<ShowDetailsComponent>;
+  let component: EmployeeShowDetailsComponent;
+  let fixture: ComponentFixture<EmployeeShowDetailsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ShowDetailsComponent]
+      imports: [EmployeeShowDetailsComponent]
     })
     .compileComponents();
-    
-    fixture = TestBed.createComponent(ShowDetailsComponent);
+
+    fixture = TestBed.createComponent(EmployeeShowDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

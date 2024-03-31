@@ -1,10 +1,10 @@
-import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { CreateEmployeeComponent } from './employee/create-employee/create-employee.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EmployeeListComponent } from './employee-list/employee-list.component';
-import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
-import { ShowDetailsComponent } from './show-details/show-details.component';
+import { EmployeeListComponent } from './employee/employee-list/employee-list.component';
+import { UpdateEmployeeComponent } from './employee/update-employee/update-employee.component';
 import { HomeComponent } from './home/home.component';
+import { EmployeeShowDetailsComponent } from './employee/employee-show-details/employee-show-details.component';
 
 
 const routes: Routes = [
@@ -13,7 +13,7 @@ const routes: Routes = [
   {path:"add-employee", component: CreateEmployeeComponent},
   {path:'', redirectTo: "home", pathMatch:"full"},
   {path:'updating-by-employeeNumber/:employeeNumber',component:UpdateEmployeeComponent},
-  {path:'details-of-employee/:employeeNumber',component:ShowDetailsComponent},
+  {path:'details-of-employee/:employeeNumber',component:EmployeeShowDetailsComponent},
   {path:'home',component:HomeComponent}
 ];
 
