@@ -25,12 +25,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgbModule,
+    HttpClientModule,
+    FormsModule,
     HomeComponent,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule ,
     ShowDetailsComponent,
     CreateEmployeeComponent,
     EmployeeListComponent,
