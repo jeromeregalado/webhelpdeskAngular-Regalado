@@ -1,1 +1,72 @@
-<p>update-employee works!</p>
+<br><br><br><br>
+<div class="container-sm">
+    <div class="col-md-6 offset-md-3 container-sm">
+
+        <form #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" class="row g-3 form-container  container-sm ">
+
+            <div class="form-group col-md-6">
+                <label><b>First Name</b></label>
+                <input type="text" class="form-control" id="fname" [(ngModel)]="employee.firstName" required minlength="3"
+                    name="fname" #fname="ngModel" [ngClass]="{ 'is-invalid': f.submitted && fname.errors }" />
+                <div *ngIf="f.submitted && fname.errors" class="invalid-feedback">
+                    <div *ngIf="fname.errors['required']">First name is required</div>
+                    <div *ngIf="fname.errors['minlength']">First Name minimum 3 characters are required!!!</div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group col-md-6">
+                <label><b>Middle Name</b></label>
+                <input type="text" class="form-control" id="mname" [(ngModel)]="employee.middleName" name="mname" required
+                    name="mname" #mname="ngModel" [ngClass]="{ 'is-invalid': f.submitted && mname.errors }">
+
+                <div *ngIf="f.submitted && mname.errors" class="invalid-feedback">
+                    <div *ngIf="mname.errors['required']">Last name is required</div>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="form-group col-md-6">
+                <label><b>Last Name</b></label>
+                <input type="lname" class="form-control" id="lname" [(ngModel)]="employee.lastName" name="lname" 
+                #lname="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lname.errors }" />
+
+                <div *ngIf="f.submitted && lname.errors" class="invalid-feedback">
+                    <div *ngIf="lname.errors['required']">lname is required</div>
+                    <div *ngIf="lname.invalid">Invalid lname format</div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label class="form-label"><b>Department</b></label>
+                <select id="department" class="form-select" [(ngModel)]="employee.department" name="department" required
+                    #department="ngModel" [ngClass]="{ 'is-invalid': f.submitted && department.errors }">
+
+
+                    <div *ngIf="f.submitted && department.errors" class="invalid-feedback">
+                        <div *ngIf="department.errors['required']">Department is required</div>
+                    </div>
+                    <option selected disabled value="">Choose...</option>
+                    <option>IT</option>
+                    <option>ADMIN</option>
+                    <option>HR</option>
+                    <option>SALES</option>
+                </select>
+            </div>
+
+            <br><br><br><br>
+
+            <div class="form-group col-md-6">
+                <button class="btn btn-success full-width-button" type="submit">Submit</button>
+            </div>
+
+            <div class="col-md-6">
+                <button type="button" (click)="goToEmployeeList()" class="btn btn-danger full-width-button">Cancel</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
