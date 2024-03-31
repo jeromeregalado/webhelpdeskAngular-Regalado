@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Employee } from '../employee';
+import { Employee } from '../employee-object/employee';
 import { ActivatedRoute } from '@angular/router';
-import { EmployeeService } from '../employee.service';
+import { EmployeeService } from '../employee-object/employee.service';
 import { AppRoutingModule } from '../app-routing.module';
 
 @Component({

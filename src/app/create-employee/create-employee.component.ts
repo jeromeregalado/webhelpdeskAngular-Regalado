@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Employee } from '../employee';
+import { Employee } from '../employee-object/employee';
 import { Observable } from 'rxjs';
-import { EmployeeService } from '../employee.service';
+import { EmployeeService } from '../employee-object/employee.service';
 import { Router } from '@angular/router';
 import { FormsModule, NgForm } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
