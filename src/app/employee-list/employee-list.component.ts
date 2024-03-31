@@ -51,8 +51,7 @@ export class EmployeeListComponent {
   }
   }
 
-
   detailsOfEmployee(id: number){
-    this.router.navigate(['details-of-employee', id]);
+    this.router.navigate(['details-of-employee/', id]);
   }
 }
