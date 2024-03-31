@@ -1,20 +1,17 @@
 
 <br>
-
 <div class="container">
-
 <h3>Employee Details</h3>
 <br>
 <div class="box">
 <div >
-    <table  class=" table table-striped  border-dark  ">
-      <thead class=" table-dark">
+    <table  class="table table-striped  border-dark  ">
+      <thead class="table-dark">
         <tr>
           <th>Attribute</th>
           <th>Value</th>
         </tr>
       </thead>
-
     <tbody>
     <tr>
           <td><b>Id</b></td>
@@ -36,13 +33,10 @@
           <td><b>Department</b></td>
           <td>{{employee.department}}</td>
         </tr>
-
     </tbody>
     </table>
-      <a routerLink="/updating-by-id/{{employee.id}}" id="btn1"class="btn btn-secondary">Update Details</a>
+      <a routerLink="/updating-by-employeeNumber/{{employee.employeeNumber}}" id="btn1"class="btn btn-secondary">Update Details</a>
       <a routerLink="/show-all-employees" id="btn2" class="btn btn-danger">Back</a>
 </div>
-
 </div>
-
 </div>
