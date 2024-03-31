@@ -4,15 +4,14 @@ import { Observable } from 'rxjs';
 import { EmployeeService } from '../employee.service';
 import { Router } from '@angular/router';
 import { FormsModule, NgForm } from '@angular/forms';
-
-
-
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-create-employee',
-  templateUrl: './create-employee.component.html'
-  ,
+  templateUrl: './create-employee.component.html' ,
+  standalone: true,
+  imports: [NgbModule, FormsModule, CommonModule],
   styleUrls: ['./create-employee.component.css']
 })
 export class CreateEmployeeComponent //implements OnInit//
@@ -26,19 +25,9 @@ export class CreateEmployeeComponent //implements OnInit//
 
   }
 
-
-
-
-
-
-
   submitform!: NgForm;
   private baseURL = "http://localhost:8081/employees";
   employee: Employee = new Employee();
-
-
-
-
 
   saveEmployee() {
     this.employeeService.addEmployee(this.employee).subscribe(data => {
@@ -55,8 +44,6 @@ export class CreateEmployeeComponent //implements OnInit//
   ngOnInit(): void { }
   onSubmit() {
     console.log(this.employee);
-
-
     this.saveEmployee();
   }
 

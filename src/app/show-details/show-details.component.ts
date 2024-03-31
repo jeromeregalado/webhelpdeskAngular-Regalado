@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { Employee } from '../employee';
 import { ActivatedRoute } from '@angular/router';
 import { EmployeeService } from '../employee.service';
+import { AppRoutingModule } from '../app-routing.module';
 
 @Component({
   selector: 'app-show-details',
-  // standalone: true,
-  // imports: [],
+  standalone: true,
+  imports: [AppRoutingModule],
   templateUrl: './show-details.component.html',
   styleUrl: './show-details.component.css'
 })

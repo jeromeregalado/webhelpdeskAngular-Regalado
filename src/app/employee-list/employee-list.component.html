@@ -2,13 +2,12 @@
 
     <div >
         <form (ngSubmit)="goToEmployee()" >
-            <div class="form-group col-md-6 inline ">
-
+            <br>
+            <div class="form-group col-md-6 inline d-flex">
                 <input  [(ngModel)]="EnteredEmployeeNumber" type="text" class="form-control" id="id" name="id" placeholder="Search by Employee Number">
-                <button class="btn btn-secondary " type="submit">Search</button>
+                <button class="btn btn-secondary buttonleftmargin" type="submit">Search</button>
             </div>
         </form>
-
     </div>
     <br>
     <br>
