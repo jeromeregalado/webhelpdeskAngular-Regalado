@@ -18,23 +18,19 @@
 
             <div class="form-group col-md-6">
                 <label><b>Middle Name</b></label>
-                <input type="text" class="form-control" id="mname" [(ngModel)]="employee.middleName" name="mname" required
+                <input type="text" class="form-control" id="mname" [(ngModel)]="employee.middleName" name="mname"
                     name="mname" #mname="ngModel" [ngClass]="{ 'is-invalid': f.submitted && mname.errors }">
-
-                <div *ngIf="f.submitted && mname.errors" class="invalid-feedback">
-                    <div *ngIf="mname.errors['required']">Last name is required</div>
-                </div>
             </div>
 
             <br><br>
 
             <div class="form-group col-md-6">
                 <label><b>Last Name</b></label>
-                <input type="lname" class="form-control" id="lname" [(ngModel)]="employee.lastName" name="lname" 
+                <input type="lname" class="form-control" id="lname" [(ngModel)]="employee.lastName" name="lname"
                 #lname="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lname.errors }" />
 
                 <div *ngIf="f.submitted && lname.errors" class="invalid-feedback">
-                    <div *ngIf="lname.errors['required']">lname is required</div>
+                    <div *ngIf="lname.errors['required']">Last Name is required</div>
                     <div *ngIf="lname.invalid">Invalid lname format</div>
                 </div>
             </div>

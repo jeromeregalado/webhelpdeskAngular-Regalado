@@ -13,6 +13,8 @@ import { UpdateEmployeeComponent } from './employee/update-employee/update-emplo
 import { EmployeeShowDetailsComponent } from './employee/employee-show-details/employee-show-details.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TicketListComponent } from './ticket/ticket-list/ticket-list.component';
+import { AddTicketComponent } from './ticket/add-ticket/add-ticket.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     EmployeeShowDetailsComponent,
     CreateEmployeeComponent,
     EmployeeListComponent,
-    UpdateEmployeeComponent
+    UpdateEmployeeComponent,
+    TicketListComponent,
+    AddTicketComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,46 @@
+
+<br>
+<div class="container">
+<h3>Employee Details</h3>
+<br>
+<div class="box">
+<div >
+    <table  class="table table-striped  border-dark  ">
+      <thead class="table-dark">
+        <tr>
+          <th>Attribute</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+    <tbody>
+    <tr>
+          <td><b>Ticket Number</b></td>
+          <td>{{ticket.ticketNumber}}</td>
+        </tr>
+        <tr>
+          <td><b>Title</b></td>
+          <td>{{ticket.title}}</td>
+        </tr>
+        <tr>
+          <td><b>Description</b></td>
+          <td>{{ticket.description}}</td>
+        </tr>
+        <tr>
+          <td><b>Severity</b></td>
+          <td>{{ticket.severity}}</td>
+        </tr>
+        <tr>
+          <td><b>Status</b></td>
+          <td>{{ticket.status}}</td>
+        </tr>
+        <tr>
+          <td><b>Assigned ID</b></td>
+          <td>{{ticket.assignee_id}}</td>
+        </tr>
+    </tbody>
+    </table>
+      <a routerLink="/updating-by-ticketNumber/{{ticket.ticketNumber}}" id="btn1"class="btn btn-secondary">Update Details</a>
+      <a routerLink="/show-all-tickets" id="btn2" class="btn btn-danger">Back</a>
+</div>
+</div>
+</div>

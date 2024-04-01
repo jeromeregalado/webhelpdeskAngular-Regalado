@@ -1,1 +1,38 @@
-<p>ticket-list works!</p>
+<div class="container">
+
+  <div >
+      <form (ngSubmit)="goToTicket()" >
+          <br>
+          <div class="form-group col-md-6 inline d-flex">
+              <input  [(ngModel)]="EnteredTicketNumber" type="text" class="form-control" id="id" name="id" placeholder="Search by Ticket Number">
+              <button class="btn btn-secondary buttonleftmargin" type="submit">Search</button>
+          </div>
+      </form>
+  </div>
+  <br>
+  <br>
+<div>
+<table style="margin-bottom: 50px;" class=" table table-responsive table-striped  border-dark">
+
+  <thead class="table-dark ">
+      <tr>
+        <th> Ticket Number</th>
+        <th> Title </th>
+      </tr>
+
+  </thead>
+
+
+  <tbody>
+      <tr *ngFor = "let ticket of tickets">
+        <td> {{ticket.ticketNumber}} </td>
+        <td> {{ ticket.title }} </td>
+          <td>
+              <button (click) = "updateTicket(ticket.ticketNumber)" class = "btn  btn-secondary btn-sm"> Update</button>
+              <button (click) = "deleteTicket(ticket.ticketNumber)" class = "btn btn-danger btn-sm" style="margin-left: 10px"> Delete</button>
+              <button (click) = "detailsOfTicket(ticket.ticketNumber)" class = "btn btn-success btn-sm " style="margin-left: 10px"> View</button>
+          </td>
+      </tr>
+  </tbody>
+</table>
+</div>
