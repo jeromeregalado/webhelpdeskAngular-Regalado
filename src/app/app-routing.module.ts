@@ -9,13 +9,14 @@ import { AddTicketComponent } from './ticket/add-ticket/add-ticket.component';
 import { TicketListComponent } from './ticket/ticket-list/ticket-list.component';
 import { TicketShowDetailsComponent } from './ticket/ticket-show-details/ticket-show-details.component';
 import { ViewAssignedTicketsComponent } from './employee/view-assigned-tickets/view-assigned-tickets.component';
-
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
 
   {path:"show-all-employees",component: EmployeeListComponent},
   {path:"add-employee", component: CreateEmployeeComponent},
-  {path:'', redirectTo: "home", pathMatch:"full"},
+  {path: 'login', component: LoginComponent},
+  {path: '', redirectTo: 'login', pathMatch: "full"},
   {path:'updating-by-employeeNumber/:employeeNumber',component:UpdateEmployeeComponent},
   {path:'details-of-employee/:employeeNumber',component:EmployeeShowDetailsComponent},
   {path:'home',component:HomeComponent},

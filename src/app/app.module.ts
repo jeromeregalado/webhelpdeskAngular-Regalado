@@ -16,7 +16,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TicketListComponent } from './ticket/ticket-list/ticket-list.component';
 import { AddTicketComponent } from './ticket/add-ticket/add-ticket.component';
 import { ViewAssignedTicketsComponent } from './employee/view-assigned-tickets/view-assigned-tickets.component';
-
+import { LoginComponent } from './login/login.component';
+import { HttpInterceptorService } from './login/HttpInterceptorService';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,9 +39,16 @@ import { ViewAssignedTicketsComponent } from './employee/view-assigned-tickets/v
     UpdateEmployeeComponent,
     TicketListComponent,
     AddTicketComponent,
-    ViewAssignedTicketsComponent
+    ViewAssignedTicketsComponent,
+    LoginComponent
   ],
-  providers: [],
+  providers: [ 
+   { 
+    provide: HTTP_INTERCEPTORS,
+    useClass: HttpInterceptorService,
+    multi: true
+  }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
