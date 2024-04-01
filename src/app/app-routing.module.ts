@@ -23,7 +23,8 @@ const routes: Routes = [
   {path:'add-ticket', component:AddTicketComponent},
   {path:'show-all-tickets', component: TicketListComponent},
   {path:'details-of-ticket/:ticketNumber',component:TicketShowDetailsComponent},
-  {path: 'view-assigned-tickets/:employeeNumber', component:ViewAssignedTicketsComponent}
+  {path: 'view-assigned-tickets/:employeeNumber', component:ViewAssignedTicketsComponent},
+  {path: 'logout', component: LoginComponent}
 ];
 
 @NgModule({
