@@ -4,12 +4,13 @@ import { EmployeeService } from '../employee-object/employee.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-employee-list',
   standalone: true,
-  imports: [NgbModule, CommonModule, FormsModule],
+  imports: [NgbModule, CommonModule, FormsModule, RouterLink],
   templateUrl: './employee-list.component.html',
   styleUrls: ['./employee-list.component.css']
 })

@@ -4,12 +4,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Ticket } from '../ticket-object/ticket';
 import { TicketService } from '../ticket-object/ticket.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-ticket-list',
   standalone: true,
-  imports: [NgbModule,CommonModule,FormsModule],
+  imports: [NgbModule,CommonModule,FormsModule, RouterLink],
   templateUrl: './ticket-list.component.html',
   styleUrl: './ticket-list.component.css'
 })

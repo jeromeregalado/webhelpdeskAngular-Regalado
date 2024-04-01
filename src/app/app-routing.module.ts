@@ -10,6 +10,7 @@ import { TicketListComponent } from './ticket/ticket-list/ticket-list.component'
 import { TicketShowDetailsComponent } from './ticket/ticket-show-details/ticket-show-details.component';
 import { ViewAssignedTicketsComponent } from './employee/view-assigned-tickets/view-assigned-tickets.component';
 import { LoginComponent } from './login/login.component';
+import { AssignTicketComponent } from './ticket/assign-ticket/assign-ticket.component';
 
 const routes: Routes = [
 
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path:'show-all-tickets', component: TicketListComponent},
   {path:'details-of-ticket/:ticketNumber',component:TicketShowDetailsComponent},
   {path: 'view-assigned-tickets/:employeeNumber', component:ViewAssignedTicketsComponent},
-  {path: 'logout', component: LoginComponent}
+  {path: 'logout', component: LoginComponent},
+  {path: 'assign-ticket', component: AssignTicketComponent}
 ];
 
 @NgModule({
