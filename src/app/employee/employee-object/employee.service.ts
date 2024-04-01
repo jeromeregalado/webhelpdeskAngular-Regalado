@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 import { Employee } from './employee';
+import { Ticket } from '../../ticket/ticket-object/ticket';
 
 
 @Injectable({
@@ -37,5 +38,8 @@ export class EmployeeService {
     return this.httpClient.delete(`${this.baseURL}/delete/${id}`);
   }
 
+  viewAssignedTickets(employeeNumber: number): Observable<Ticket[]>{
+    return this.httpClient.get<Ticket[]>(`${this.baseURL}/viewAssignedTickets/${employeeNumber}`);
+  }
 
 }

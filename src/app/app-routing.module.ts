@@ -8,6 +8,7 @@ import { EmployeeShowDetailsComponent } from './employee/employee-show-details/e
 import { AddTicketComponent } from './ticket/add-ticket/add-ticket.component';
 import { TicketListComponent } from './ticket/ticket-list/ticket-list.component';
 import { TicketShowDetailsComponent } from './ticket/ticket-show-details/ticket-show-details.component';
+import { ViewAssignedTicketsComponent } from './employee/view-assigned-tickets/view-assigned-tickets.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'add-ticket', component:AddTicketComponent},
   {path:'show-all-tickets', component: TicketListComponent},
   {path:'details-of-ticket/:ticketNumber',component:TicketShowDetailsComponent},
+  {path: 'view-assigned-tickets/:employeeNumber', component:ViewAssignedTicketsComponent}
 ];
 
 @NgModule({

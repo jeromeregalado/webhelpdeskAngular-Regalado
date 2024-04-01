@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TicketListComponent } from './ticket/ticket-list/ticket-list.component';
 import { AddTicketComponent } from './ticket/add-ticket/add-ticket.component';
+import { ViewAssignedTicketsComponent } from './employee/view-assigned-tickets/view-assigned-tickets.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { AddTicketComponent } from './ticket/add-ticket/add-ticket.component';
     EmployeeListComponent,
     UpdateEmployeeComponent,
     TicketListComponent,
-    AddTicketComponent
+    AddTicketComponent,
+    ViewAssignedTicketsComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
