@@ -37,6 +37,10 @@
           <td><b>Assigned Person</b></td>
           <td>{{ticket.assignee.firstName}}  {{ticket.assignee.lastName}}</td>
         </tr>
+        <tr *ngFor="let watchers of ticket.watchers">
+          <td><b>Watcher</b></td>
+          <td>{{watchers.employeeNumber}}</td>
+        </tr>
     </tbody>
     </table>
       <a routerLink="/updating-by-ticketNumber/{{ticket.ticketNumber}}" id="btn1"class="btn btn-secondary">Update Details</a>

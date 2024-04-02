@@ -30,7 +30,7 @@ const routes: Routes = [
   {path: 'logout', component: LoginComponent},
   {path: 'assign-ticket/:ticketNumber', component: AssignTicketComponent},
   {path: 'update-ticket/:ticketNumber', component: UpdateTicketComponent},
-  {path: 'add-watcher', component: AddWatcherComponent}
+  {path: 'add-watcher/:ticketNumber', component: AddWatcherComponent}
 ];
 
 @NgModule({

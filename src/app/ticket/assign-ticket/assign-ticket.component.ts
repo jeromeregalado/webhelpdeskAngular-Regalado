@@ -40,7 +40,8 @@ export class AssignTicketComponent {
 
   onSubmit(){
     this.ticketService.assignTicket(this.assignTicketDTO).subscribe( data =>{
-      console.log(data);
+      console.log(data.toString());
+      confirm(data.toString())
       this.goToEmployeeList();
     }
     

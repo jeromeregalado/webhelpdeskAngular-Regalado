@@ -1,4 +1,5 @@
 <div class="container col-lg-6">
+  <br>
     <h1 class="text-center">Login</h1>
     <div class="card">
       <div class="card-body">
@@ -10,13 +11,16 @@
             <input type="text" class="form-control" id="username" [(ngModel)]="username" placeholder="Enter User Name"
               name="username">
           </div>
+          <br>
           <div class="form-group">
             <label for="pwd">Password:</label>
             <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="Enter password"
               name="password">
           </div>
+          <br>
           <button (click)=handleLogin() class="btn btn-success">Login</button>
         </form>
+        <br>
       </div>
     </div>
   </div>

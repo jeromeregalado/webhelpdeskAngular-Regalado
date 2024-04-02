@@ -3,11 +3,12 @@ import { Ticket } from '../ticket-object/ticket';
 import { RouterLink } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { TicketService } from '../ticket-object/ticket.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-ticket-show-details',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, CommonModule],
   templateUrl: './ticket-show-details.component.html',
   styleUrl: './ticket-show-details.component.css'
 })

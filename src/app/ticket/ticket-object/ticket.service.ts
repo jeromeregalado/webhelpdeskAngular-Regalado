@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Ticket } from './ticket';
 import { AssignTicketDTO } from './assign-ticket-dto';
+import { AddWatcherDTO } from './add-watcher-dto';
 
 
 @Injectable({
@@ -42,6 +43,10 @@ export class TicketService {
   }
 
   assignTicket(assignTicketDTO: AssignTicketDTO): Observable<Object>{
-    return this.httpClient.put(`${this.baseURL}/assign`, assignTicketDTO);
+    return this.httpClient.put(`${this.baseURL}/assign`, assignTicketDTO, {responseType: 'text'});
+  }
+
+  addWatcher(addWatcherDTO: AddWatcherDTO){
+    return this.httpClient.post(`${this.baseURL}/watchers/addWatcher`, addWatcherDTO, {responseType: 'text'});
   }
 }

@@ -59,4 +59,8 @@ export class TicketListComponent {
     this.router.navigate(['assign-ticket',ticketNumber]);
   }
 
+  addWatcher(ticketNumber : number){
+    this.router.navigate(['add-watcher',ticketNumber]);
+  }
+
 }
