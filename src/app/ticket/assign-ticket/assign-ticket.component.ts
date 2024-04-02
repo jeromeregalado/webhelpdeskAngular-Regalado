@@ -30,6 +30,7 @@ export class AssignTicketComponent {
     //loading the data into form
   ngOnInit(): void {
     this.ticketNumber = this.route.snapshot.params['ticketNumber'];
+    this.assignTicketDTO.ticketNumber = this.ticketNumber
     this.ticketService.getTicketByTicketNumber(this.ticketNumber).subscribe(data => {
       this.ticket = data;
     }, error => console.log(error));
@@ -38,15 +39,19 @@ export class AssignTicketComponent {
   }
 
   onSubmit(){
-    this.assignTicketDTO.ticketNumber = this.ticketNumber
-    this.assignTicketDTO.employeeNumber = this.employeeNumber
     this.ticketService.assignTicket(this.assignTicketDTO).subscribe( data =>{
-      this.goToTicketList();
+      console.log(data);
+      this.goToEmployeeList();
     }
+    
     , error => console.log(error));
   }
 
   goToTicketList(){
     this.router.navigate(['/show-all-tickets']);
+  }
+
+  goToEmployeeList() {
+    this.router.navigate(['/show-all-employees']);
   }
 }

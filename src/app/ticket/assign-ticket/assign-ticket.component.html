@@ -3,16 +3,16 @@
     <form #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" class="row g-3 form-container  container-sm ">
         <div class="form-group col-md-12">
             <label><b>Ticket Number</b></label>
-            <input type="text" class="form-control" id="ticketNumber" [(ngModel)]="ticket.ticketNumber" required
+            <input type="text" class="form-control" id="ticketNumber" [(ngModel)]="assignTicketDTO.ticketNumber" required
                 name="ticketNumber" #ticketNumber="ngModel" [ngClass]="{ 'is-invalid': f.submitted && ticketNumber.errors }" readonly/>
          </div>
          <div class="form-group col-md-12">
             <label><b>Employee Number</b></label>
-            <input type="text" class="form-control" id="employeeNumber" [(ngModel)]="employeeNumber" required name="employeeNumber"
+            <input type="text" class="form-control" id="employeeNumber" [(ngModel)]="assignTicketDTO.employeeNumber" required name="employeeNumber"
                 name="employeeNumber" #employeeNumber="ngModel"/>
          </div>
          <div class="form-group col-md-6">
-                <button class="btn btn-success full-width-button" type="submit" id="reg" [disabled]="">Submit</button>
+                <button routerLink="show-all-employees" class="btn btn-success full-width-button" type="submit" id="reg" [disabled]="">Submit</button>
             </div>
 
             <div class="col-md-6">

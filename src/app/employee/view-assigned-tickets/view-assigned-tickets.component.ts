@@ -28,6 +28,9 @@ export class ViewAssignedTicketsComponent {
   ngOnInit(): void {
     this.employeeNumber = this.route.snapshot.params['employeeNumber'];
     this.employee = new Employee();
+    this.employeeService.getEmployeeByEmployeeNumber(this.employeeNumber).subscribe( data => {
+      this.employee = data;
+    });
     this.employeeService.viewAssignedTickets(this.employeeNumber).subscribe(data => {this.tickets = data;})
   }
 }
