@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 import { Ticket } from './ticket';
+import { AssignTicketDTO } from './assign-ticket-dto';
 
 
 @Injectable({
@@ -40,7 +41,7 @@ export class TicketService {
     return this.httpClient.put(`${this.baseURL}/update`, ticket);
   }
 
-  assignTicket(ticketNumber: number): Observable<Object>{
-    return this.httpClient.put(`${this.baseURL}/assign`, ticketNumber);
+  assignTicket(assignTicketDTO: AssignTicketDTO): Observable<Object>{
+    return this.httpClient.put(`${this.baseURL}/assign`, assignTicketDTO);
   }
 }
