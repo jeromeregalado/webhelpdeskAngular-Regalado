@@ -47,7 +47,7 @@ export class TicketListComponent {
       console.log(data);
       this.getTickets();
     })
-    window.location.reload();
+    this.getTickets();
   }
   }
 

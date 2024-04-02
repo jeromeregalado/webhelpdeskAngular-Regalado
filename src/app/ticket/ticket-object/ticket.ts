@@ -6,6 +6,6 @@ export class Ticket{
   description! : string;
   severity! : string;
   status! : string;
-  assignee_id! : number;
+  assignee! : Employee;
   watchers! : Set<Employee>;
 }

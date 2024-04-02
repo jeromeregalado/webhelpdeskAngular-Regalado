@@ -46,9 +46,9 @@ export class EmployeeListComponent {
     if(confirm("Are you sure to delete Employee Number: " + employeeNumber)){
     this.employeeService.deleteEmployee(employeeNumber).subscribe( data => {
       console.log(data);
+      confirm(data.toString())
       this.getEmployees();
     })
-    window.location.reload();
   }
   }
 

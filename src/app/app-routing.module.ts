@@ -12,6 +12,7 @@ import { ViewAssignedTicketsComponent } from './employee/view-assigned-tickets/v
 import { LoginComponent } from './login/login.component';
 import { AssignTicketComponent } from './ticket/assign-ticket/assign-ticket.component';
 import { UpdateTicketComponent } from './ticket/update-ticket/update-ticket.component';
+import { AddWatcherComponent } from './ticket/add-watcher/add-watcher.component';
 
 const routes: Routes = [
 
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path: 'view-assigned-tickets/:employeeNumber', component:ViewAssignedTicketsComponent},
   {path: 'logout', component: LoginComponent},
   {path: 'assign-ticket/:ticketNumber', component: AssignTicketComponent},
-  {path: 'update-ticket/:ticketNumber', component: UpdateTicketComponent}
+  {path: 'update-ticket/:ticketNumber', component: UpdateTicketComponent},
+  {path: 'add-watcher', component: AddWatcherComponent}
 ];
 
 @NgModule({
