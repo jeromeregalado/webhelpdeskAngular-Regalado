@@ -1,35 +1,32 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { TicketService } from '../../ticket/ticket-object/ticket.service';
-import { Ticket } from '../ticket-object/ticket';
+import { TicketService } from '../ticket/ticket-object/ticket.service';
+import { Ticket } from '../ticket/ticket-object/ticket';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
-import { AssignTicketDTO } from '../ticket-object/assign-ticket-dto';
 
 @Component({
-  selector: 'app-assign-ticket',
+  selector: 'app-update-ticket',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl: './assign-ticket.component.html',
-  styleUrl: './assign-ticket.component.css'
+  templateUrl: './update-ticket.component.html',
+  styleUrl: './update-ticket.component.css'
 })
-export class AssignTicketComponent {
+export class UpdateTicketComponent {
   ticketNumber: number;
   ticket: Ticket = new Ticket();
-  assignTicketDTO: AssignTicketDTO = new AssignTicketDTO();
-  employeeNumber: number;
 
 
   constructor(private ticketService: TicketService,
     private route: ActivatedRoute,
     private router: Router) {
       this.ticketNumber=0
-      this.employeeNumber=0
     }
     //loading the data into form
   ngOnInit(): void {
     this.ticketNumber = this.route.snapshot.params['ticketNumber'];
+
     this.ticketService.getTicketByTicketNumber(this.ticketNumber).subscribe(data => {
       this.ticket = data;
     }, error => console.log(error));
@@ -38,9 +35,7 @@ export class AssignTicketComponent {
   }
 
   onSubmit(){
-    this.assignTicketDTO.ticketNumber = this.ticketNumber
-    this.assignTicketDTO.employeeNumber = this.employeeNumber
-    this.ticketService.assignTicket(this.assignTicketDTO).subscribe( data =>{
+    this.ticketService.updateTicket(this.ticket).subscribe( data =>{
       this.goToTicketList();
     }
     , error => console.log(error));

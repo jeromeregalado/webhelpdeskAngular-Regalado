@@ -1,0 +1,75 @@
+<br><br><br><br>
+<div class="container-sm">
+    <div class="col-md-6 offset-md-3 container-sm">
+
+        <form #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" class="row g-3 form-container  container-sm ">
+
+            <div class="form-group col-md-6">
+                <label><b>Ticket Number</b></label>
+                <input type="text" class="form-control" id="ticketNumber" [(ngModel)]="ticket.ticketNumber" required
+                    name="ticketNumber" #ticketNumber="ngModel" [ngClass]="{ 'is-invalid': f.submitted && ticketNumber.errors }" readonly/>
+            </div>
+
+
+            <div class="form-group col-md-6">
+                <label><b>Title</b></label>
+                <input type="text" class="form-control" id="title" [(ngModel)]="ticket.title" name="title"
+                    name="title" #title="ngModel" [ngClass]="{ 'is-invalid': f.submitted && title.errors }">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label><b>Description</b></label>
+                <input type="text" class="form-control" id="description" [(ngModel)]="ticket.description" name="description"
+                    name="description" #description="ngModel" [ngClass]="{ 'is-invalid': f.submitted && description.errors }">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label class="form-label"><b>Severity</b></label>
+                <select id="severity" class="form-select" [(ngModel)]="ticket.severity" name="severity" required
+                    #severity="ngModel" [ngClass]="{ 'is-invalid': f.submitted && severity.errors }">
+
+                    <div *ngIf="f.submitted && severity.errors" class="invalid-feedback">
+                        <div *ngIf="severity.errors['required']">Severity is required</div>
+                    </div>
+
+
+                    <option selected disabled value="">Choose..</option>
+                    <option>LOW</option>
+                    <option>NORMAL</option>
+                    <option>MAJOR</option>
+                    <option>CRITICAL</option>
+                </select>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label class="form-label"><b>Status</b></label>
+              <select id="status" class="form-select" [(ngModel)]="ticket.status" name="status" required
+                  #status="ngModel" [ngClass]="{ 'is-invalid': f.submitted && status.errors }">
+
+                  <div *ngIf="f.submitted && status.errors" class="invalid-feedback">
+                      <div *ngIf="status.errors['required']">Status is required</div>
+                  </div>
+
+
+                  <option selected disabled value="">Choose..</option>
+                  <option>NEW</option>
+                  <option>ASSIGNED</option>
+                  <option>IN_PROGRESS</option>
+                  <option>CLOSED</option>
+              </select>
+          </div>
+
+            <br><br><br><br>
+
+            <div class="form-group col-md-6">
+                <button class="btn btn-success full-width-button" type="submit">Submit</button>
+            </div>
+
+            <div class="col-md-6">
+                <button type="button" (click)="goToTicketList()" class="btn btn-danger full-width-button">Cancel</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>

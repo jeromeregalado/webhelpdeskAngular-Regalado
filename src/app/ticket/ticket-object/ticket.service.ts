@@ -36,5 +36,11 @@ export class TicketService {
     return this.httpClient.delete(`${this.baseURL}/delete/${ticketNumber}`);
   }
 
+  updateTicket(ticket: Ticket): Observable<Object>{
+    return this.httpClient.put(`${this.baseURL}/update`, ticket);
+  }
 
+  assignTicket(ticketNumber: number): Observable<Object>{
+    return this.httpClient.put(`${this.baseURL}/assign`, ticketNumber);
+  }
 }

@@ -1,1 +1,24 @@
-<p>assign-ticket works!</p>
+<div class="col-md-6 offset-md-3 container-sm">
+    <br><br>
+    <form #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" class="row g-3 form-container  container-sm ">
+        <div class="form-group col-md-12">
+            <label><b>Ticket Number</b></label>
+            <input type="text" class="form-control" id="ticketNumber" [(ngModel)]="ticket.ticketNumber" required
+                name="ticketNumber" #ticketNumber="ngModel" [ngClass]="{ 'is-invalid': f.submitted && ticketNumber.errors }" readonly/>
+         </div>
+         <div class="form-group col-md-12">
+            <label><b>Employee Number</b></label>
+            <input type="text" class="form-control" id="employeeNumber" [(ngModel)]="employeeNumber" required name="employeeNumber"
+                name="ticketNumber" #ticketNumber="ngModel"/>
+         </div>
+         <div class="form-group col-md-6">
+                <button class="btn btn-success full-width-button" type="submit" id="reg" [disabled]="">Submit</button>
+            </div>
+
+            <div class="col-md-6">
+                <button type="button" (click)="goToTicketList()" class="btn btn-danger full-width-button">Cancel</button>
+            </div>
+    </form>
+
+    <br><br>
+</div>

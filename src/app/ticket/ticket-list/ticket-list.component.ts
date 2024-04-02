@@ -37,8 +37,8 @@ export class TicketListComponent {
     this.ticketService.getTicketList().subscribe(data => {this.tickets = data;});
   }
 
-  updateTicket(id: number){
-    this.router.navigate(['updating-by-ticketNumber/', id]);
+  updateTicket(ticketNumber: number){
+    this.router.navigate(['update-ticket/', ticketNumber]);
   }
 
   deleteTicket(ticketNumber: number){
@@ -53,6 +53,10 @@ export class TicketListComponent {
 
   detailsOfTicket(ticketNumber: number){
     this.router.navigate(['details-of-ticket/', ticketNumber]);
+  }
+
+  assignTicket(ticketNumber: number){
+    this.router.navigate(['assign-ticket',ticketNumber]);
   }
 
 }
