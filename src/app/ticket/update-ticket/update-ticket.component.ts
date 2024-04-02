@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { TicketService } from '../ticket/ticket-object/ticket.service';
-import { Ticket } from '../ticket/ticket-object/ticket';
+import { TicketService } from '../ticket-object/ticket.service';
+import { Ticket } from '../ticket-object/ticket';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 

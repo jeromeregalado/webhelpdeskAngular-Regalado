@@ -11,7 +11,7 @@ import { TicketShowDetailsComponent } from './ticket/ticket-show-details/ticket-
 import { ViewAssignedTicketsComponent } from './employee/view-assigned-tickets/view-assigned-tickets.component';
 import { LoginComponent } from './login/login.component';
 import { AssignTicketComponent } from './ticket/assign-ticket/assign-ticket.component';
-import { UpdateTicketComponent } from './update-ticket/update-ticket.component';
+import { UpdateTicketComponent } from './ticket/update-ticket/update-ticket.component';
 
 const routes: Routes = [
 

@@ -19,7 +19,7 @@ import { ViewAssignedTicketsComponent } from './employee/view-assigned-tickets/v
 import { LoginComponent } from './login/login.component';
 import { HttpInterceptorService } from './login/HttpInterceptorService';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { UpdateTicketComponent } from './update-ticket/update-ticket.component';
+import { UpdateTicketComponent } from './ticket/update-ticket/update-ticket.component';
 
 @NgModule({
   declarations: [
