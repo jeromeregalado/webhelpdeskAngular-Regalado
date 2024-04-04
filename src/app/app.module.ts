@@ -20,6 +20,7 @@ import { LoginComponent } from './login/login.component';
 import { HttpInterceptorService } from './login/HttpInterceptorService';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UpdateTicketComponent } from './ticket/update-ticket/update-ticket.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { UpdateTicketComponent } from './ticket/update-ticket/update-ticket.comp
     AddTicketComponent,
     ViewAssignedTicketsComponent,
     LoginComponent,
-    UpdateTicketComponent
+    UpdateTicketComponent,
+    LogoutComponent
   ],
   providers: [ 
    { 

@@ -19,7 +19,8 @@ export class AuthenticationService {
 
   authenticationService(username: string, password: string) {
     return this.http.post(`http://localhost:8081/api/v1/basicauth`,
-      { headers: { authorization: this.createBasicAuthToken(username, password) } }).pipe(map((res) => {
+      { 
+        headers: { authorization: this.createBasicAuthToken(username, password) } }).pipe(map((res) => {
         this.username = username;
         this.password = password;
         this.registerSuccessfulLogin(username, password);
@@ -38,6 +39,7 @@ export class AuthenticationService {
     sessionStorage.removeItem(this.USER_NAME_SESSION_ATTRIBUTE_NAME);
     this.username = '';
     this.password = '';
+    window.location.replace('login')
   }
 
   isUserLoggedIn() {

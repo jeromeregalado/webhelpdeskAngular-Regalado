@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './logout.component.html',
   styleUrl: './logout.component.css'
 })
-export class MenuComponent implements OnInit {
+export class LogoutComponent implements OnInit {
 
   isLoggedIn = false;
 
