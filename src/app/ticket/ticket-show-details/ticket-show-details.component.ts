@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { TicketService } from '../ticket-object/ticket.service';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ticket-show-details',
@@ -15,9 +16,14 @@ import { CommonModule } from '@angular/common';
 export class TicketShowDetailsComponent {
   ticketNumber: number
   ticket!: Ticket
-  constructor(private route: ActivatedRoute, private ticketService: TicketService) {
+  constructor(private route: ActivatedRoute, private ticketService: TicketService,
+    private router: Router) {
 
     this.ticketNumber=0
+  }
+
+  updateTicket(ticketNumber: number){
+    this.router.navigate(['update-ticket/', ticketNumber]);
   }
 
   ngOnInit(): void {

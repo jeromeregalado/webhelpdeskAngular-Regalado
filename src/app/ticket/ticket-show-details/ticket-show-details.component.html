@@ -43,7 +43,7 @@
         </tr>
     </tbody>
     </table>
-      <a routerLink="/updating-by-ticketNumber/{{ticket.ticketNumber}}" id="btn1"class="btn btn-secondary">Update Details</a>
+      <a (click)="updateTicket(ticket.ticketNumber)" id="btn1"class="btn btn-secondary">Update Details</a>
       <a routerLink="/show-all-tickets" id="btn2" class="btn btn-danger">Back</a>
 </div>
 </div>
