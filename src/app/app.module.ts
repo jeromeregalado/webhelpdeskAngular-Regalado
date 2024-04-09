@@ -30,20 +30,8 @@ import { LogoutComponent } from './logout/logout.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
     HttpClientModule,
-    FormsModule,
-    HomeComponent,
     BrowserAnimationsModule,
-    EmployeeShowDetailsComponent,
-    CreateEmployeeComponent,
-    EmployeeListComponent,
-    UpdateEmployeeComponent,
-    TicketListComponent,
-    AddTicketComponent,
-    ViewAssignedTicketsComponent,
-    LoginComponent,
-    UpdateTicketComponent,
     LogoutComponent
   ],
   providers: [ 
