@@ -6,6 +6,9 @@ import { CommonModule } from '@angular/common';
 import { AddWatcherDTO } from '../ticket-object/add-watcher-dto';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { Employee } from '../../employee/employee-object/employee';
+import { EmployeeService } from '../../employee/employee-object/employee.service';
+
 
 @Component({
   selector: 'app-add-watcher',
@@ -19,12 +22,15 @@ export class AddWatcherComponent {
   ticket: Ticket = new Ticket();
   addWatcherDTO: AddWatcherDTO = new AddWatcherDTO();
   employeeNumber: number;
+  employees: Employee[];
 
 
   constructor(private ticketService: TicketService,
     private route: ActivatedRoute,
-    private router: Router) {
+    private router: Router,
+    private employeeService: EmployeeService) {
       this.ticketNumber=0
+      this.employees=[];
       this.employeeNumber=0
     }
     //loading the data into form
@@ -34,8 +40,12 @@ export class AddWatcherComponent {
     this.ticketService.getTicketByTicketNumber(this.ticketNumber).subscribe(data => {
       this.ticket = data;
     }, error => console.log(error));
+    this.getEmployees();
 
+  }
 
+  getEmployees(){
+    this.employeeService.getEmployeesList().subscribe(data => {this.employees = data;});
   }
 
   onSubmit(){
@@ -44,7 +54,7 @@ export class AddWatcherComponent {
       confirm(data.toString())
       this.goToEmployeeList();
     }
-    
+
     , error => console.log(error));
   }
 
